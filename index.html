@@ -124,7 +124,7 @@ nav.on {
   min-height:100vh;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
-  padding:120px 6vw 80px;
+  padding:80px 6vw 60px;
   position:relative; overflow:hidden;
   text-align:center;
 }
@@ -143,7 +143,7 @@ nav.on {
 /* Hero headline */
 .h-hl {
   font-family:var(--fd);
-  font-size:clamp(76px,13.5vw,172px);
+  font-size:clamp(64px,10.5vw,148px);
   font-weight:300; letter-spacing:-.025em; line-height:1.08;
   position:relative; z-index:2;
 }
@@ -157,23 +157,23 @@ nav.on {
 /* Gold rule */
 .h-rule {
   width:1px; height:0; background:var(--g);
-  margin:40px auto; transition:height 1s .4s cubic-bezier(.22,1,.36,1);
+  margin:0 auto 24px;
+  transition:height 1s .4s cubic-bezier(.22,1,.36,1);
 }
-.h-rule.in { height:72px }
+.h-rule.in { height:48px }
 
 /* Subtext */
 .h-sub {
   font-family:var(--fb); font-size:clamp(11px,1.2vw,13px);
   font-weight:300; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink3); opacity:0; transform:translateY(10px);
+  color:var(--ink3); opacity:0; transform:translateY(8px);
   transition:opacity .8s ease .7s, transform .8s cubic-bezier(.22,1,.36,1) .7s;
-  position:relative; z-index:2;
+  margin-bottom:24px;
 }
 .h-sub.in { opacity:1; transform:none }
 
 /* Scroll cue */
 .h-scroll {
-  position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
   display:flex; flex-direction:column; align-items:center; gap:9px;
   opacity:0; transition:opacity 1s ease 1.6s;
 }
@@ -523,22 +523,20 @@ footer {
 <section id="hero">
   <div class="h-edge">Xystam &nbsp;·&nbsp; Est. 2026 &nbsp;·&nbsp; India</div>
 
-  <div style="position:relative;z-index:2;width:100%">
-    <h1 class="h-hl">
-      <span class="h-line"><span class="h-word italic" id="hw1">Crafted</span></span>
-      <span class="h-line"><span class="h-word" id="hw2">to Think.</span></span>
-    </h1>
+  <h1 class="h-hl" style="position:relative;z-index:2">
+    <span class="h-line"><span class="h-word italic" id="hw1">Crafted</span></span>
+    <span class="h-line"><span class="h-word" id="hw2">to Think.</span></span>
+  </h1>
 
+  <div style="display:flex;flex-direction:column;align-items:center;margin-top:40px;position:relative;z-index:2">
     <div class="h-rule" id="h-rule"></div>
-
     <p class="h-sub" id="h-sub">
       Intelligent software &nbsp;·&nbsp; Built with purpose &nbsp;·&nbsp; Made in India
     </p>
-  </div>
-
-  <div class="h-scroll" id="h-scroll">
-    <div class="h-scroll-bar"></div>
-    <span class="h-scroll-label">Scroll</span>
+    <div class="h-scroll" id="h-scroll">
+      <div class="h-scroll-bar"></div>
+      <span class="h-scroll-label">Scroll</span>
+    </div>
   </div>
 </section>
 
